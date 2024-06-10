@@ -42,18 +42,18 @@ On the CircuitPlayground Express board with a usb cable:
 ---
 # Pre-Setup
 ### In pre-setup, a lot of variables are declared. They are largely split up into their seperate variable types
-	```
-{
 
-long rand_Number = 0;  // used to set a random value to determine left or right led pattern in game_Lights_Level
+`long rand_Number = 0;  // used to set a random value to determine left or right led pattern in game_Lights_Level
 int rand_Int = 0;      // can't use ints for rand() so need to set this value to use in int arrays
-
+`
+`
 bool game_On = 0;        // variable used to turn on and off the waiting zone between levels
 bool game_Win = 0;       // variable used to determine whether or not player won the game
 bool left_Pressed = 0;   // used to break out of large for loop in user input program
 bool right_Pressed = 0;  // used to break out of large for loop in user input program
 bool clear_Pixels = 0;   // used to turn off all neopixels once when switching back to game from standby mode
-
+`
+`
 int level_Win = 0;              // used to determine whether the player won the level or gets sent back to level 1
 int game_Level = 0;             // used to tell the user & program what level of the game they are on
 int game_Level_Save = 0;        // used by Mode 1, also known as error code 1, where user interrupts game while it is displaying pattern to play
@@ -62,7 +62,8 @@ int game_Difficulty_Input = 0;  // used in user input section to be able to skip
 int light_Pattern_Stage = 0;    // used by game and user input arrays to input game and user left/right side (1 or 2) integer values into corresponding array slot
 int user_Matched_Pattern = 0;   // used in user input section to set an int value for the number of left and right inputs that match game_Matched_Pattern
 int game_Matched_Pattern = 0;   // used in user input section to set a stacking int value (1 for left, 2 for right) for every pattern in array game_Pattern_Int
-
+`
+`
 int left_Leds[] = { 0, 1, 2, 3, 4 };                   // array for various lighting patterns utilizing the left side neopixels of the CircuitPlayground
 int right_Leds[] = { 5, 6, 7, 8, 9 };                  // array for various lighting patterns utilizing the right side neopixels of the CircuitPlayground
 int leds[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };         // array used for various setting of all neopixels on/to a certain color within code
@@ -72,19 +73,21 @@ int user_Pattern_Int[11];                              // array used for storing
 int game_Pattern_Int[11];                              // array used for storing the game left/right pattern (1 = left, 2 = right)
 String game_Pattern[11];                               // array used for storing the game left/right pattern (left or right) to display for the user
 String pattern_Side = "nothing";                       // used for String game_Pattern array naming
-
+`
+`
 const int interruptPinLB = 4;      // left button interrupt pin
 const int interruptPinRB = 5;      // right button interrupt pin
 const int interruptPinSwitch = 7;  // switch interrupt pin
-
+`
+`
 volatile bool leftButton_intFlag = 0;   // flag for left button pressed
 volatile bool rightButton_intFlag = 0;  // flag for right button pressed
 volatile bool switch_intFlag = 0;       // flag for switch pressed
-
+`
+`
 AsyncDelay delay_4s;  // 4 econd delay for user input section, will fail the user if no input detected within timeframe of 4000 ms.
-}
-```
-{
+`
+
 ## Setup
 
 ## A bit about myself:
