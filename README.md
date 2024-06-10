@@ -42,7 +42,7 @@ On the CircuitPlayground Express board with a usb cable:
 ---
 # Pre-Setup
 ### In pre-setup, a lot of variables are declared. They are largely split up into their seperate variable types
-` 
+{
 long rand_Number = 0;  // used to set a random value to determine left or right led pattern in game_Lights_Level
 int rand_Int = 0;      // can't use ints for rand() so need to set this value to use in int arrays
 
@@ -79,7 +79,7 @@ volatile bool leftButton_intFlag = 0;   // flag for left button pressed
 volatile bool rightButton_intFlag = 0;  // flag for right button pressed
 volatile bool switch_intFlag = 0;       // flag for switch pressed
 
-AsyncDelay delay_4s;  // 4 econd delay for user input section, will fail the user if no input detected within timeframe of 4000 ms. `
+AsyncDelay delay_4s;  // 4 econd delay for user input section, will fail the user if no input detected within timeframe of 4000 ms. }
 
 ## Setup
 
