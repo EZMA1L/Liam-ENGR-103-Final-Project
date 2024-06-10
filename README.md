@@ -78,6 +78,8 @@ int game_Difficulty_Input = 0;
 `
 > game_Difficulty: used to tell the light pattern code and user input code how many times to display lights and how many times to check for input
 > game_Difficulty_Input: used in user input section to be able to skip the rest of light pattern showing if correct input already played
+
+
 `
 int light_Pattern_Stage = 0;
 int user_Matched_Pattern = 0;
@@ -101,15 +103,12 @@ String pattern_Side = "nothing";                       // used for String game_P
 const int interruptPinLB = 4;      // left button interrupt pin
 const int interruptPinRB = 5;      // right button interrupt pin
 const int interruptPinSwitch = 7;  // switch interrupt pin
-`
-`
+
 volatile bool leftButton_intFlag = 0;   // flag for left button pressed
 volatile bool rightButton_intFlag = 0;  // flag for right button pressed
 volatile bool switch_intFlag = 0;       // flag for switch pressed
-`
-`
+
 AsyncDelay delay_4s;  // 4 econd delay for user input section, will fail the user if no input detected within timeframe of 4000 ms.
-`
 
 ## Setup
 
