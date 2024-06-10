@@ -28,9 +28,9 @@
 
 ## Specifications:
 	| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+	| ----------- | ----------- |
+	| Header | Title |
+	| Paragraph | Text |
 
 ### References
 
