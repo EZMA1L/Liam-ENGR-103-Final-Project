@@ -48,14 +48,18 @@ long rand_Number = 0;
 
 int rand_Int = 0;  
 >  // can't use ints for rand() so need to set this value to use in int arrays
-
-bool game_On = 0;        // variable used to turn on and off the waiting zone between levels
-bool game_Win = 0;       // variable used to determine whether or not player won the game
-bool left_Pressed = 0;   // used to break out of large for loop in user input program
-bool right_Pressed = 0;  // used to break out of large for loop in user input program
-bool clear_Pixels = 0;   // used to turn off all neopixels once when switching back to game from standby mode
 `
+bool game_On = 0;
+bool game_Win = 0;
+bool left_Pressed = 0;
+bool right_Pressed = 0; 
+bool clear_Pixels = 0;
 `
+> game_On: variable used to turn on and off the waiting zone between levels
+> game_Win: variable used to determine whether or not player won the game
+> left_Pressed: used to break out of large for loop in user input program
+> right_Pressed: used to break out of large for loop in user input program
+> clear_Pixels: used to turn off all neopixels once when switching back to game from standby mode
 int level_Win = 0;              // used to determine whether the player won the level or gets sent back to level 1
 int game_Level = 0;             // used to tell the user & program what level of the game they are on
 int game_Level_Save = 0;        // used by Mode 1, also known as error code 1, where user interrupts game while it is displaying pattern to play
