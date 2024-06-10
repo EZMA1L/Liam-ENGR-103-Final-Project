@@ -43,10 +43,12 @@ On the CircuitPlayground Express board with a usb cable:
 # Pre-Setup
 ### In pre-setup, a lot of variables are declared. They are largely split up into their seperate variable types
 
-long rand_Number = 0;  // used to set a random value to determine left or right led pattern in game_Lights_Level
-int rand_Int = 0;      // can't use ints for rand() so need to set this value to use in int arrays
-`
-`
+long rand_Number = 0;   
+> used to set a random value to determine left or right led pattern in game_Lights_Level
+
+int rand_Int = 0;  
+>  // can't use ints for rand() so need to set this value to use in int arrays
+
 bool game_On = 0;        // variable used to turn on and off the waiting zone between levels
 bool game_Win = 0;       // variable used to determine whether or not player won the game
 bool left_Pressed = 0;   // used to break out of large for loop in user input program
