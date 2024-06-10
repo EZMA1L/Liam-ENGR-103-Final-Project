@@ -85,9 +85,12 @@ int light_Pattern_Stage = 0;
 int user_Matched_Pattern = 0;
 int game_Matched_Pattern = 0;
 `
-> light_Pattern_Stage: used by game and user input arrays to input game and user left/right side (1 or 2) integer values into corresponding array slot
+> light_Pattern_Stage: used by game and user input arrays to input game and user left/right side (1 or 2) integer values into corresponding array slot4
+> 
 > user_Matched_Pattern: used in user input section to set an int value for the number of left and right inputs that match game_Matched_Pattern
+> 
 > game_Matched_Pattern: used in user input section to set a stacking int value (1 for left, 2 for right) for every pattern in array game_Pattern_Int
+> 
 
 
 int left_Leds[] = { 0, 1, 2, 3, 4 };                   // array for various lighting patterns utilizing the left side neopixels of the CircuitPlayground
