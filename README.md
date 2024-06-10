@@ -51,7 +51,7 @@ long rand_Number = 0;
 `
 int rand_Int = 0;
 `
->  // can't use ints for rand() so need to set this value to use in int arrays
+>  can't use ints for rand() so need to set this value to use in int arrays
 
 `
 bool game_On = 0;
@@ -61,23 +61,32 @@ bool right_Pressed = 0;
 bool clear_Pixels = 0;
 `
 > game_On: variable used to turn on and off the waiting zone between levels
+> 
 > game_Win: variable used to determine whether or not player won the game
+> 
 > left_Pressed: used to break out of large for loop in user input program
+> 
 > right_Pressed: used to break out of large for loop in user input program
+> 
 > clear_Pixels: used to turn off all neopixels once when switching back to game from standby mode
+> 
 
 `
 int level_Win = 0; int game_Level = 0;
 `
 > level_Win: used to determine whether the player won the level or gets sent back to level 1.
+> 
 > game_Level: used to tell the user & program what level of the game they are on
+> 
 
 `
 int game_Difficulty = 2;
 int game_Difficulty_Input = 0;
 `
 > game_Difficulty: used to tell the light pattern code and user input code how many times to display lights and how many times to check for input
+> 
 > game_Difficulty_Input: used in user input section to be able to skip the rest of light pattern showing if correct input already played
+> 
 
 
 `
@@ -92,16 +101,35 @@ int game_Matched_Pattern = 0;
 > game_Matched_Pattern: used in user input section to set a stacking int value (1 for left, 2 for right) for every pattern in array game_Pattern_Int
 > 
 
+`
+int left_Leds[] = { 0, 1, 2, 3, 4 };
+int right_Leds[] = { 5, 6, 7, 8, 9 };
+int leds[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int ledsoffset[] = { 6, 7, 8, 9, 0, 1, 2, 3, 4, 5 };
+int ledstopdown[] = { 0, 9, 1, 8, 2, 7, 3, 6, 4, 5 };
+int user_Pattern_Int[11];
+int game_Pattern_Int[11];
+String game_Pattern[11];
+String pattern_Side = "nothing";
+`
+> left_Leds[]: array for various lighting patterns utilizing the left side neopixels of the CircuitPlayground
+>
+> right_Leds[]: array for various lighting patterns utilizing the right side neopixels of the CircuitPlayground
+>
+> leds[]: array used for various setting of all neopixels on/to a certain color within code
+>
+> ledsoffset[]: array used for standby mode loading icon leading edge turning on of LED
+>
+> ledstopdown[]: array used for standby mode loading icon trailing edge turning off of LED
+> 
+> user_Pattern_Int[]: array used for storing the user left/right pattern of inputs (LB = 1 = left, RB = 2 = right)
+>
+> game_Pattern_Int[]: array used for storing the game left/right pattern (1 = left, 2 = right)
+>
+> game_Pattern[]: array used for storing the game left/right pattern (left or right) to display for the user
+>
+> pattern_Side: used for String game_Pattern array naming
 
-int left_Leds[] = { 0, 1, 2, 3, 4 };                   // array for various lighting patterns utilizing the left side neopixels of the CircuitPlayground
-int right_Leds[] = { 5, 6, 7, 8, 9 };                  // array for various lighting patterns utilizing the right side neopixels of the CircuitPlayground
-int leds[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };         // array used for various setting of all neopixels on/to a certain color within code
-int ledsoffset[] = { 6, 7, 8, 9, 0, 1, 2, 3, 4, 5 };   // array used for standby mode loading icon leading edge turning on of LED
-int ledstopdown[] = { 0, 9, 1, 8, 2, 7, 3, 6, 4, 5 };  // array used for standby mode loading icon trailing edge turning off of LED
-int user_Pattern_Int[11];                              // array used for storing the user left/right pattern of inputs (LB = 1 = left, RB = 2 = right)
-int game_Pattern_Int[11];                              // array used for storing the game left/right pattern (1 = left, 2 = right)
-String game_Pattern[11];                               // array used for storing the game left/right pattern (left or right) to display for the user
-String pattern_Side = "nothing";                       // used for String game_Pattern array naming
 
 const int interruptPinLB = 4;      // left button interrupt pin
 const int interruptPinRB = 5;      // right button interrupt pin
