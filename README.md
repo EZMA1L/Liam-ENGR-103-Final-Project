@@ -130,17 +130,34 @@ String pattern_Side = "nothing";
 >
 > pattern_Side: used for String game_Pattern array naming
 
+`
+const int interruptPinLB = 4;
+const int interruptPinRB = 5;
+const int interruptPinSwitch = 7;
+`
+> interruptPinLB: left button interrupt pin
+>
+> interruptPinRB: right button interrupt pin
+>
+> interruptPinSwitch: switch interrupt pin
 
-const int interruptPinLB = 4;      // left button interrupt pin
-const int interruptPinRB = 5;      // right button interrupt pin
-const int interruptPinSwitch = 7;  // switch interrupt pin
+`
+volatile bool leftButton_intFlag = 0;
+volatile bool rightButton_intFlag = 0;
+volatile bool switch_intFlag = 0;
+`
+> leftButton_intFlag: activates every time left button pressed
+>
+> rightButton_intFlag: activates every time right button pressed
+>
+> switch_intFlag: activates every time switch changes state
 
-volatile bool leftButton_intFlag = 0;   // flag for left button pressed
-volatile bool rightButton_intFlag = 0;  // flag for right button pressed
-volatile bool switch_intFlag = 0;       // flag for switch pressed
+`
+AsyncDelay delay_4s;
+`
+>  4 econd delay for user input section, will fail the user if no input detected within timeframe of 4000 ms.
 
-AsyncDelay delay_4s;  // 4 econd delay for user input section, will fail the user if no input detected within timeframe of 4000 ms.
-
+--- 
 ## Setup
 
 ## A bit about myself:
