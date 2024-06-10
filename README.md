@@ -587,7 +587,7 @@ Gameplay code follows this setup for levels 1-9;
 for every other level, just replace the game_Difficulty = 1 with that level #.
 This calls the Lighting Pattern function and then the User Input Function So let me explain those now:
 ---
-##Lighting Pattern Function
+## Lighting Pattern Function
 
 The light pattern function is fairly straightforward, for the most part it just takes a random value, either 0 or 1, and uses that to assign 0 to left and 1 to right in order to 'truly' randomize which side the light pattern displays on. It repeats this until it reaches the value of the game difficulty, which sets how many patterns it plays in sequence, and then the function ends.
 
