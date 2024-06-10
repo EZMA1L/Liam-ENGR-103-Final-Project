@@ -26,11 +26,14 @@
 
 ![Neopixels](https://cdn-learn.adafruit.com/assets/assets/000/034/012/large1024/circuit_playground_neoorder.jpg)
 
-## Specifications:
-	| Syntax | Description |
-	| ----------- | ----------- |
-	| Header | Title |
-	| Paragraph | Text |
+## Specifications/Inputs/Outputs:
+On the CircuitPlayground Express board with a usb cable:
+
+	| Itemization	 | Task (Input/Output) | 
+	| Neopixels 0-9  |       Output        |
+	| Left Button    | 	 Input         |
+	| Right Button   |	 Input         |
+ 	| Switch 	 |	 Input         |
 
 ### References
 
