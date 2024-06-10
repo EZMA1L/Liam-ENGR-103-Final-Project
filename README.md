@@ -22,9 +22,15 @@
 ## This is a pretty big project, but I tried to split it up into distinct groupings to make it easier (for me) to process, debug, and modify.
 ---
 # What is this project?
-## >This is a 9 level game where you, the player, interface with a CircuitPlayground Express board. The board will turn on the neopixels on the left side of the board or the right side of the board, and it is up to you to memorize the side and in which order the neopixels turn on. To help with this, the left side neopixels will be lit up blue and the right side red, and each will make a different tone. If you input the same pattern the board shows you by pressing either the left or right button, you win, and move onto the next level. If you don't press the right button or within 4 seconds, you will fail the game and be sent back to level 1.
+> This is a 9 level game where you, the player, interface with a CircuitPlayground Express board. The board will turn on the neopixels on the left side of the board or the right side of the board, and it is up to you to memorize the side and in which order the neopixels turn on. To help with this, the left side neopixels will be lit up blue and the right side red, and each will make a different tone. If you input the same pattern the board shows you by pressing either the left or right button, you win, and move onto the next level. If you don't press the right button or within 4 seconds, you will fail the game and be sent back to level 1.
 
 ![Neopixels]https://cdn-learn.adafruit.com/assets/assets/000/034/012/large1024/circuit_playground_neoorder.jpg
+
+## Specifications:
+	| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
 
 ### References
 
